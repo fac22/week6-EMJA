@@ -1,17 +1,27 @@
-import Layout from "../../components/layout";
+// import Layout from "../../components/layout";
 import Link from "next/link";
 import Image from "next/image";
 
-import { getProduct } from "../../database/model.js";
+import { getProduct, getAllProductsIds } from "../../database/model.js";
+
+export async function getStaticPaths() {
+  const paths = getAllProductsIds();
+  return {
+    paths,
+    fallback: false,
+  };
+}
+
+export async function getStaticProps({ params }) {}
 
 export default function Cupcake({ productData }) {
   return (
-    <Layout>
+    <>
       <article>
         <h1>{productData.name}</h1>
         <Image
-            src={`/${productData.image}.jpeg`}
-        //   src={`/public/images/id_1.jpeg`}
+          src={`/${productData.image}.png`}
+          //   src={`/public/images/id_1.jpeg`}
           alt={productData.name}
           width="300"
           height="300"
@@ -19,6 +29,6 @@ export default function Cupcake({ productData }) {
         <p>{productData.description}</p>
         {/* <p >Price  </p> */}
       </article>
-    </Layout>
+    </>
   );
 }
