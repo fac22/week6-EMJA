@@ -45,6 +45,16 @@
   justify-content: space-between;
 }
 
+.small {
+  border: 5px solid black;
+}
+.medium {
+  width: 200px;
+}
+.large {
+  width: 400px;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
