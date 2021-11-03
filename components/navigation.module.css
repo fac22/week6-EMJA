@@ -1,0 +1,18 @@
+.navigation {
+  border-radius: 2rem;
+  font-size: 1rem;
+  padding: 1rem;
+
+  border: 1px solid #ff64be;
+  border-radius: 12px;
+  box-shadow: 0px 4px 5px rgba(252, 119, 221, 0.6);
+
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.navigation:hover,
+.navigation:focus,
+.navigation:active {
+  transform: translateY(3%);
+  border-color: #0070f3;
+}

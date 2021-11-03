@@ -1,0 +1,20 @@
+.button {
+  background-color: white;
+  width: 10rem;
+  font-size: 1.2rem;
+  font-family: "Zen Kurenaido", sans-serif;
+
+  margin: 10px;
+  padding: 1rem;
+
+  border: 1px solid #ff9671;
+  border-radius: 12px;
+  box-shadow: 0px 4px 5px rgba(252, 143, 119, 0.6);
+
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.button:hover {
+  transform: translateY(-3%);
+  cursor: pointer;
+}
