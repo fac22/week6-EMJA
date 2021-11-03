@@ -1,0 +1,16 @@
+.navigation {
+  border-radius: 2rem;
+  color: black;
+  font-size: 1rem;
+  padding: 1rem;
+
+  border: 1px solid rgba(23, 22, 16, 0.8);
+  border-radius: 5px;
+  box-shadow: 0px 4px 5px rgba(252, 154, 119, 0.6);
+
+  transition: all 0.3s;
+}
+
+.navigation:hover {
+  transform: translateY(3%);
+}
