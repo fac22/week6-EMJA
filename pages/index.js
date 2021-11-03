@@ -35,7 +35,7 @@ export default function Home({ selectedCupcakes }) {
 
       <main className={styles.main}>
         <h1 className={styles.title}>EMJA Bakery 🧁</h1>
-        <small>World's best cupcakes</small>
+        <small>World&rsquo;s best cupcakes</small>
         <Image
           className={styles.header}
           src={`/images/header.jpeg`}
