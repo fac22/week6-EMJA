@@ -15,7 +15,6 @@ export async function getStaticProps() {
 }
 
 export default function Home({ cupcakeData }) {
-  console.log(cupcakeData);
   return (
     <div className={styles.container}>
       <Head>
@@ -32,7 +31,15 @@ export default function Home({ cupcakeData }) {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Welcome to EMJA bakery 🧁</h1>
+        <h1 className={styles.title}>EMJA Bakery 🧁</h1>
+        <small>World's best cupcakes</small>
+        <Image
+          className={styles.header}
+          src={`/images/header.jpeg`}
+          width="500"
+          height="300"
+        />
+        <h2>Featured products</h2>
         <ul className={styles.grid}>
           {cupcakeData.map((cupcake) => (
             <li className={styles.card} key={cupcake.id}>
@@ -46,7 +53,7 @@ export default function Home({ cupcakeData }) {
               />
               <p>{cupcake.description}</p>
               <Link href={`/products/${cupcake.id}`}>
-                <a>Click</a>
+                <a>Read more</a>
               </Link>
             </li>
           ))}

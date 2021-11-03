@@ -6,10 +6,22 @@ body {
 }
 
 a {
-  color: inherit;
+  display: inline-block;
+  margin-top: 0.5rem;
   text-decoration: none;
+  color: inherit;
 }
-
+a:visited {
+  color: inherit;
+}
+a:hover {
+  color: #ffa16f;
+}
 * {
   box-sizing: border-box;
+}
+
+small {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }
