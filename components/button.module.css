@@ -1,15 +1,17 @@
 .button {
-  background: #845ec2;
-  color: white;
-  font-size: 2rem;
+  background-color: white;
+  width: 10rem;
+  font-size: 1.2rem;
   font-family: "Zen Kurenaido", sans-serif;
+
   margin: 10px;
-  border-radius: 12px;
-  border: 1px solid rgba(23, 22, 16, 0.8);
-  box-shadow: 0px 3px 3px rgba(134, 10, 211, 0.5);
   padding: 1rem;
 
-  transition: all 0.3s;
+  border: 1px solid #ff9671;
+  border-radius: 12px;
+  box-shadow: 0px 4px 5px rgba(252, 143, 119, 0.6);
+
+  transition: color 0.15s ease, border-color 0.15s ease;
 }
 
 .button:hover {
