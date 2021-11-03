@@ -53,8 +53,10 @@ export default function Cupcake({ cupcakeData }) {
         </div>
 
         <h1 className={stylesProduct.h1}>{cupcakeData.name}</h1>
-        <div className={stylesProduct.image}>
-          <div className={chooseClass(size)}>
+
+        <div className={`${stylesProduct.image} ${stylesProduct.flex}`}>
+          <div className={`${chooseClass(size)} ${stylesProduct.image}`}>
+
             <Image
               src={`/images/${cupcakeData.id}.png`}
               // src={`/../public/images/id_1.jpeg`}
@@ -65,8 +67,10 @@ export default function Cupcake({ cupcakeData }) {
           </div>
         </div>
 
-        <div className={stylesProduct.description}>
-          <p>{cupcakeData.description}</p>
+
+          <div className={stylesProduct.description}>
+            <p>{cupcakeData.description}</p>
+          </div>
         </div>
         {/* <p >Price  </p> */}
         <div>
