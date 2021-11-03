@@ -46,7 +46,11 @@ export default function Home({ selectedCupcakes }) {
         <ul className={styles.grid}>
           {selectedCupcakes.map((cupcake) => (
             <li className={styles.card} key={cupcake.id}>
-              <p>{cupcake.name}</p>
+              <p>
+                {cupcake.name.length > 24
+                  ? cupcake.name.slice(0, 24) + " ..."
+                  : cupcake.name}
+              </p>
 
               <Image
                 src={`/images/${cupcake.id}.png`}
