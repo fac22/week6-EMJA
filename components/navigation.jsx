@@ -6,7 +6,7 @@ export default function Navigation({ url, text }) {
   return (
     <div className={stylesNavigation.navigation}>
       <Link href={url}>
-        <a>{text}</a>
+        <a className={stylesNavigation.a}>{text}</a>
       </Link>
     </div>
   );
