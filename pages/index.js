@@ -22,13 +22,20 @@ export default function Home({ cupcakeData }) {
         <title>EMJA bakery 🧁</title>
         <meta name="description" content="" />
         <link rel="icon" href="/favicon.ico" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap"
+          rel="stylesheet"
+        />
       </Head>
 
       <main className={styles.main}>
         <h1 className={styles.title}>Welcome to EMJA bakery 🧁</h1>
-        <ul>
+        <ul className={styles.grid}>
           {cupcakeData.map((cupcake) => (
-            <li key={cupcake.id}>
+            <li className={styles.card} key={cupcake.id}>
               <p>{cupcake.name}</p>
 
               <Image
