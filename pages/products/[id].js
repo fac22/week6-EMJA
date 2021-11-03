@@ -1,11 +1,10 @@
 // import Layout from "../../components/layout";
-
+import stylesProduct from "../../styles/Product.module.css";
 import Image from "next/image";
 import { getAllProductIds, getProduct } from "../../database/model";
 
 export async function getStaticPaths() {
   const allProductIds = await getAllProductIds();
-
   const productIdArray = allProductIds.map((item) => {
     return { params: { id: item.id.toString() } };
   });
@@ -28,7 +27,7 @@ export async function getStaticProps({ params }) {
 export default function Cupcake({ cupcakeData }) {
   return (
     <>
-      <article>
+      <article className={stylesProduct.container}>
         <h1>{cupcakeData.name}</h1>
         <Image
           src={`/images/${cupcakeData.id}.png`}
