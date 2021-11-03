@@ -1,8 +1,19 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import Link from "next/link";
 
-export default function Home() {
+import { getAllProducts } from "../database/model";
+
+export async function getStaticProps() {
+  const cupcakeData = await getAllProducts();
+  return {
+    props: {
+      cupcakeData,
+    },
+  };
+}
+
+export default function Home({ cupcakeData }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -14,7 +25,16 @@ export default function Home() {
       <main className={styles.main}>
         <h1 className={styles.title}>Welcome to EMJA bakery 🧁</h1>
       </main>
-
+      <ul>
+        {cupcakeData.map((cupcake) => (
+          <li key={cupcake.id}>
+            <Link href={`/products/${cupcake.id}`}>
+              <a>{cupcake.name}</a>
+            </Link>
+            <br />
+          </li>
+        ))}
+      </ul>
       <footer className={styles.footer}></footer>
     </div>
   );

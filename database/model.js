@@ -2,7 +2,6 @@ import { db } from "../database/connection.js";
 
 export function getAllProducts() {
   return db.query(`SELECT * FROM products`).then((result) => {
-    console.log(`INSIDE CONSOLE LOG!!!!!! ${result}`);
     return result.rows;
   });
 }
