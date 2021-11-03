@@ -1,16 +1,18 @@
 .navigation {
   border-radius: 2rem;
-  color: black;
   font-size: 1rem;
   padding: 1rem;
 
-  border: 1px solid rgba(23, 22, 16, 0.8);
-  border-radius: 5px;
-  box-shadow: 0px 4px 5px rgba(252, 154, 119, 0.6);
+  border: 1px solid #ff64be;
+  border-radius: 12px;
+  box-shadow: 0px 4px 5px rgba(252, 119, 221, 0.6);
 
-  transition: all 0.3s;
+  transition: color 0.15s ease, border-color 0.15s ease;
 }
 
-.navigation:hover {
+.navigation:hover,
+.navigation:focus,
+.navigation:active {
   transform: translateY(3%);
+  border-color: #0070f3;
 }

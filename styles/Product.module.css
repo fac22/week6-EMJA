@@ -14,13 +14,10 @@
   align-items: center;
 
   font-family: "Zen Kurenaido", sans-serif;
-
-  background-color: #ffc75f;
 }
 
 .h1 {
   font-size: 3rem;
-
   margin-top: 1rem;
 }
 
@@ -29,16 +26,17 @@
 }
 
 .description {
-  background-color: #ff9671;
+  /* background-color: #ff9671; */
+  /* background-color: #ffc75f; */
   max-width: 60%;
   padding: 1rem;
   font-size: 1.5rem;
 
-  border: 1px solid rgba(23, 22, 16, 0.8);
+  border: 1px solid #ff64be;
   border-radius: 12px;
-  box-shadow: 0px 4px 5px rgba(252, 154, 119, 0.6);
+  box-shadow: 0px 4px 5px rgba(252, 119, 221, 0.6);
 
-  transition: all 0.5s;
+  transition: color 0.15s ease, border-color 0.15s ease;
 }
 
 .navigation {
