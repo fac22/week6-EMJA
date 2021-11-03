@@ -7,14 +7,17 @@ import { getAllProducts } from "../database/model";
 
 export async function getStaticProps() {
   const cupcakeData = await getAllProducts();
+
+  const shuffledCupcakes = cupcakeData.sort(() => 0.5 - Math.random());
+  let selectedCupcakes = shuffledCupcakes.slice(0, 6);
   return {
     props: {
-      cupcakeData,
+      selectedCupcakes,
     },
   };
 }
 
-export default function Home({ cupcakeData }) {
+export default function Home({ selectedCupcakes }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -41,7 +44,7 @@ export default function Home({ cupcakeData }) {
         />
         <h2>Featured products</h2>
         <ul className={styles.grid}>
-          {cupcakeData.map((cupcake) => (
+          {selectedCupcakes.map((cupcake) => (
             <li className={styles.card} key={cupcake.id}>
               <p>{cupcake.name}</p>
 
