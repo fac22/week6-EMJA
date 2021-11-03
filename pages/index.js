@@ -7,28 +7,45 @@ import { getAllProducts } from "../database/model";
 
 export async function getStaticProps() {
   const cupcakeData = await getAllProducts();
+
+  const shuffledCupcakes = cupcakeData.sort(() => 0.5 - Math.random());
+  let selectedCupcakes = shuffledCupcakes.slice(0, 6);
   return {
     props: {
-      cupcakeData,
+      selectedCupcakes,
     },
   };
 }
 
-export default function Home({ cupcakeData }) {
-  console.log(cupcakeData);
+export default function Home({ selectedCupcakes }) {
   return (
     <div className={styles.container}>
       <Head>
         <title>EMJA bakery 🧁</title>
         <meta name="description" content="" />
         <link rel="icon" href="/favicon.ico" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap"
+          rel="stylesheet"
+        />
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Welcome to EMJA bakery 🧁</h1>
-        <ul>
-          {cupcakeData.map((cupcake) => (
-            <li key={cupcake.id}>
+        <h1 className={styles.title}>EMJA Bakery 🧁</h1>
+        <small>World's best cupcakes</small>
+        <Image
+          className={styles.header}
+          src={`/images/header.jpeg`}
+          width="500"
+          height="300"
+        />
+        <h2>Featured products</h2>
+        <ul className={styles.grid}>
+          {selectedCupcakes.map((cupcake) => (
+            <li className={styles.card} key={cupcake.id}>
               <p>{cupcake.name}</p>
 
               <Image
@@ -39,7 +56,7 @@ export default function Home({ cupcakeData }) {
               />
               <p>{cupcake.description}</p>
               <Link href={`/products/${cupcake.id}`}>
-                <a>Click</a>
+                <a>Read more</a>
               </Link>
             </li>
           ))}

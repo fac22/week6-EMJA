@@ -4,15 +4,26 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Zen Kurenaido", sans-serif;
 }
 
 a {
-  color: inherit;
+  display: inline-block;
+  margin-top: 0.5rem;
   text-decoration: none;
+  color: inherit;
 }
-
+a:visited {
+  color: inherit;
+}
+a:hover {
+  color: #ffa16f;
+}
 * {
   box-sizing: border-box;
+}
+
+small {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }
