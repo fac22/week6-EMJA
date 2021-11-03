@@ -1,6 +1,6 @@
 // import Layout from "../../components/layout";
-import Link from "next/link";
-import fs from "fs";
+// import Link from "next/link";
+// import fs from "fs";
 
 import Image from "next/image";
 import { getAllProductIds, getProduct } from "../../database/model";
