@@ -1,18 +1,22 @@
 .navigation {
   border-radius: 2rem;
   font-size: 1rem;
-  padding: 1rem;
-
-  border: 1px solid #ff64be;
+  padding: 0.6rem;
+  border: 1px solid #bb69e1;
   border-radius: 12px;
-  box-shadow: 0px 4px 5px rgba(252, 119, 221, 0.6);
+  box-shadow: 0px 2px 5px rgba(252, 119, 221, 0.6);
+  transition: color 0.15s ease;
+  vertical-align: center;
+  margin-bottom: 5rem;
+}
 
-  transition: color 0.15s ease, border-color 0.15s ease;
+.a {
+  margin: 0;
+  vertical-align: center;
 }
 
 .navigation:hover,
 .navigation:focus,
 .navigation:active {
-  transform: translateY(3%);
-  border-color: #0070f3;
+  transform: scale(1.1);
 }

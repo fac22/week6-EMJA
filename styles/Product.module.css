@@ -5,38 +5,36 @@
 .main {
   min-height: 100vh;
   max-width: 100vw;
-  padding: 4rem 0;
-
+  padding: 1rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: top;
   align-items: center;
-
-  font-family: "Zen Kurenaido", sans-serif;
 }
 
 .h1 {
   font-size: 3rem;
   margin-top: 1rem;
+  color: #bb69e1;
+  border-radius: 25px;
 }
 
 .image {
-  width: 300px;
+  width: 150px;
+  margin-right: 1rem;
 }
 
 .description {
   /* background-color: #ff9671; */
   /* background-color: #ffc75f; */
-  max-width: 60%;
+  max-width: 30%;
   padding: 1rem;
-  font-size: 1.5rem;
-
+  font-size: 1.2rem;
   border: 1px solid #ff64be;
   border-radius: 12px;
-  box-shadow: 0px 4px 5px rgba(252, 119, 221, 0.6);
-
-  transition: color 0.15s ease, border-color 0.15s ease;
+  box-shadow: 0px 2px 5px rgba(252, 119, 221, 0.6);
+  transition: color 0.15s ease;
 }
 
 .navigation {
@@ -45,9 +43,34 @@
   justify-content: space-between;
 }
 
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
     flex-direction: column;
+  }
+
+  .flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .description {
+    /* background-color: #ff9671; */
+    /* background-color: #ffc75f; */
+    max-width: 80%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border: 1px solid #ff64be;
+    border-radius: 12px;
+    box-shadow: 0px 2px 5px rgba(252, 119, 221, 0.6);
+    transition: color 0.15s ease;
   }
 }
