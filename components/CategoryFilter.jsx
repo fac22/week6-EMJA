@@ -5,7 +5,7 @@ import styles from "../styles/Home.module.css";
 
 export default function CategoryFilter({ cupcakeData }) {
   const [category, setCategory] = React.useState(" ");
-  console.log(category);
+
   return (
     <div>
       <fieldset>
