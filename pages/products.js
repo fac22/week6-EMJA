@@ -1,9 +1,11 @@
+import React from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import Nav from "../components/navigation.jsx";
 import Pricefilter from "../components/pricefilter.jsx";
+import CategoryFilter from "../components/CategoryFilter";
 import stylesProduct from "../styles/Product.module.css";
 
 import { getAllProducts } from "../database/model";
@@ -45,6 +47,7 @@ export default function Products({ cupcakeData }) {
         </div>
         <h2>All products</h2>
         <Pricefilter cupcakeData={cupcakeData} />
+        <CategoryFilter cupcakeData={cupcakeData} />
       </main>
     </div>
   );
