@@ -33,8 +33,8 @@ export default function ThankYou() {
 
   <div className={stylesProduct.pink}>
         <h1>Thank you</h1>
-        <h2>We've received your order</h2>
-        <p>You're cupcakes are on its way 🚀</p>
+        <h2>We&rsquo;ve received your order</h2>
+        <p>Your cupcakes are on its way 🚀</p>
         </div>
       </main>
 
