@@ -1,12 +1,12 @@
-import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
-import styles from "../styles/Home.module.css";
-import Nav from "../components/navigation.jsx";
-import Pricefilter from "../components/pricefilter.jsx";
-import stylesProduct from "../styles/Product.module.css";
+import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
+import styles from '../styles/Home.module.css';
+import Nav from '../components/navigation.jsx';
+import Pricefilter from '../components/pricefilter.jsx';
+import stylesProduct from '../styles/Product.module.css';
 
-import { getAllProducts } from "../database/model";
+import { getAllProducts } from '../database/model';
 
 export async function getStaticProps() {
   const cupcakeData = await getAllProducts();
@@ -35,41 +35,16 @@ export default function Products({ cupcakeData }) {
       </Head>
       <main className={styles.main}>
         <div className={stylesProduct.navigation}>
-          <Nav url={"/"} text={"Home 🏠 "} />
+          <Nav url={'/'} text={'Home 🏠 '} />
 
           <div className={styles.centre}>
             <h1 className={styles.title}>EMJA Bakery 🧁</h1>
             <small>World&rsquo;s best cupcakes</small>
           </div>
-          <Nav url={"/basket"} text={"Basket 🧺 "} />
+          <Nav url={'/basket'} text={'Basket 🧺 '} />
         </div>
-        <Pricefilter cupcakeData={cupcakeData} />
         <h2>All products</h2>
-        <ul className={styles.grid}>
-          {cupcakeData.map((cupcake) => (
-            <li className={styles.card} key={cupcake.id}>
-              <div className={styles.flexRow}>
-                <p className={styles.bold}>
-                  {cupcake.name.length > 18
-                    ? cupcake.name.slice(0, 18) + " ..."
-                    : cupcake.name}
-                </p>
-
-                <Image
-                  src={`/images/${cupcake.id}.png`}
-                  alt={cupcake.name}
-                  width="50"
-                  height="50"
-                />
-              </div>
-              <p>{cupcake.description}</p>
-              <p>{cupcake.price}</p>
-              <Link href={`/products/${cupcake.id}`}>
-                <a className={styles.readMore}>Read more</a>
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <Pricefilter cupcakeData={cupcakeData} />
       </main>
     </div>
   );
