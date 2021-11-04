@@ -35,3 +35,23 @@ small {
 input[type="radio"]:checked + label {
   background-color: lightgrey;
 }
+
+fieldset {
+  border-color: #bb69e1;
+}
+
+input[type=range] {
+  background-color: #bb69e1;
+
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  background-color: #bb69e1;
+
+}
+
+@media (max-width: 600px) {
+a {
+  text-align: center;
+}
+}

@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 
-export default function QuantityPicker() {
-  const [quantity, setQuantity] = useState(0);
-  console.log(quantity);
+export default function QuantityPicker({quantity, setQuantity}) {
+
   const handleIncrement = () => {
     setQuantity((prevQuantity) => prevQuantity + 1);
   };

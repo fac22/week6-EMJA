@@ -20,9 +20,9 @@ export default function ThankYou() {
         />
       </Head>
 
-      <main className={`${styles.main}, ${stylesProduct.sticky}`}>
-        <div className={stylesProduct.navigation}>
-          <Nav url={"/"} text={"Home 🏠 "} />
+      <main className={styles.buyMain}>
+      <div className={stylesProduct.navigation}>
+          <Nav url={"/products"} text={"Home 🏠 "} />
 
           <div className={styles.centre}>
             <h1 className={styles.title}>EMJA Bakery 🧁</h1>
@@ -31,7 +31,7 @@ export default function ThankYou() {
           <Nav url={"/basket"} text={"Basket 🧺 "} />
         </div>
 
-  <div className={`${stylesProduct.centre}, ${stylesProduct.pink}`}>
+  <div className={stylesProduct.pink}>
         <h1>Thank you</h1>
         <h2>We've received your order</h2>
         <p>You're cupcakes are on its way 🚀</p>

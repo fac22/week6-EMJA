@@ -56,6 +56,7 @@ export default function Basket({ basketItems }) {
                 <p>{item.products.name}</p>
                 <p>{item.products.price}</p>
                 <p>{item.products.quantity}</p>
+                <p>{item.products.size}</p>
               </div>
             </li>
           ))}

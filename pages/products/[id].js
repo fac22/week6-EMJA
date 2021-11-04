@@ -8,7 +8,7 @@ import Nav from "../../components/navigation.jsx";
 import SizePicker from "../../components/size-picker.jsx";
 import Head from "next/head";
 import styles from "../../styles/Home.module.css";
-
+import QuantityPicker from "../../components/quantity-picker";
 
 import { getAllProductIds, getProduct } from "../../database/model";
 
@@ -45,6 +45,7 @@ async function addToBasket(data) {
 
 export default function Cupcake({ cupcakeData }) {
   const [size, setSize] = useState(" ");
+  const [quantity, setQuantity] = useState(0);
 
   return (
     <>
@@ -89,6 +90,9 @@ export default function Cupcake({ cupcakeData }) {
               <p>£{cupcakeData.price}</p>
             </div>
 
+            <div>
+              <QuantityPicker quantity={quantity} setQuantity={setQuantity} />
+            </div>
             <div>
               <SizePicker size={size} setSize={setSize} />
             </div>
