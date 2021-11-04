@@ -43,33 +43,8 @@ export default function Products({ cupcakeData }) {
           </div>
           <Nav url={"/basket"} text={"Basket 🧺 "} />
         </div>
-        <Pricefilter cupcakeData={cupcakeData} />
         <h2>All products</h2>
-        <ul className={styles.grid}>
-          {cupcakeData.map((cupcake) => (
-            <li className={styles.card} key={cupcake.id}>
-              <div className={styles.flexRow}>
-                <p className={styles.bold}>
-                  {cupcake.name.length > 18
-                    ? cupcake.name.slice(0, 18) + " ..."
-                    : cupcake.name}
-                </p>
-
-                <Image
-                  src={`/images/${cupcake.id}.png`}
-                  alt={cupcake.name}
-                  width="50"
-                  height="50"
-                />
-              </div>
-              <p>{cupcake.description}</p>
-              <p>{cupcake.price}</p>
-              <Link href={`/products/${cupcake.id}`}>
-                <a className={styles.readMore}>Read more</a>
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <Pricefilter cupcakeData={cupcakeData} />
       </main>
     </div>
   );

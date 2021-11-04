@@ -68,11 +68,10 @@ export default function Cupcake({ cupcakeData }) {
           </div>
           <div className={stylesProduct.description}>
             <p>{cupcakeData.description}</p>
-            <p>{cupcakeData.price}</p>
+            <p>£{cupcakeData.price.toFixed(2)}</p>
           </div>
         </div>
 
-        {/* <p >Price  </p> */}
         <div>
           <SizePicker size={size} setSize={setSize} />
         </div>

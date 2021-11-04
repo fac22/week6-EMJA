@@ -70,6 +70,7 @@ export default function Home({ selectedCupcakes }) {
                 />
               </div>
               <p>{cupcake.description}</p>
+              <p>£{cupcake.price.toFixed(2)}</p>
               <Link href={`/products/${cupcake.id}`}>
                 <a className={styles.readMore}>Read more</a>
               </Link>
