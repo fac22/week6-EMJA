@@ -37,6 +37,8 @@ export default function Home({ selectedCupcakes }) {
 
       <main className={styles.main}>
         <div className={stylesProduct.navigation}>
+          <Nav url={"/products"} text={"Shop Now 🧁 "} />
+
           <div>
             <h1 className={styles.title}>EMJA Bakery 🧁</h1>
             <small>World&rsquo;s best cupcakes</small>
