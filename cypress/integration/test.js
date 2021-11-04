@@ -6,7 +6,7 @@ beforeEach(() => {
 
 describe('more info about the cupcake', () => {
   it('looking at the cupcake', () => {
-    cy.visit('http://localhost:3000/');
+    cy.visit('/');
     cy.contains('All Cupcakes').click();
     cy.contains('Read more').click();
     cy.url().should('include', '/products/1');
@@ -15,7 +15,7 @@ describe('more info about the cupcake', () => {
 
 describe('product', () => {
   it('see all cupcakes', () => {
-    cy.visit('http://localhost:3000/');
+    cy.visit('/');
     cy.contains('All Cupcakes').click();
     cy.url().should('include', '/products');
   });
@@ -23,7 +23,7 @@ describe('product', () => {
 
 describe('filter the cupCakes', () => {
   it('filter', () => {
-    cy.visit('http://localhost:3000/products');
+    cy.visit('/products');
     cy.get('input').type('2.5');
   });
 });
