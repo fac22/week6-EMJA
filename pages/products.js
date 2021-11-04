@@ -39,7 +39,7 @@ export default function Products({ cupcakeData }) {
 
           <div className={styles.centre}>
             <h1 className={styles.title}>EMJA Bakery 🧁</h1>
-            <small>World&rsquo;s best cupcakes</small>
+            <small>The world&rsquo;s best cupcakes</small>
           </div>
           <Nav url={"/basket"} text={"Basket 🧺 "} />
         </div>
