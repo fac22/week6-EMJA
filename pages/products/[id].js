@@ -8,7 +8,7 @@ import Nav from "../../components/navigation.jsx";
 import SizePicker from "../../components/size-picker.jsx";
 import Head from "next/head";
 import styles from "../../styles/Home.module.css";
-import QuantityPicker from "../../components/quantity-picker";
+import QuantityPicker from "../../components/quantity-picker.js";
 
 import { getAllProductIds, getProduct } from "../../database/model";
 
