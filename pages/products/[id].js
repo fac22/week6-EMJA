@@ -6,6 +6,7 @@ import Image from "next/image";
 import Button from "../../components/button.jsx";
 import Nav from "../../components/navigation.jsx";
 import SizePicker from "../../components/size-picker.jsx";
+import Head from "next/head";
 
 import { getAllProductIds, getProduct } from "../../database/model";
 
@@ -46,6 +47,18 @@ export default function Cupcake({ cupcakeData }) {
 
   return (
     <>
+      <Head>
+        <title>Delicious Cupcake 🧁</title>
+        <meta name="description" content="" />
+        <link rel="icon" href="/favicon.ico" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
       <article className={stylesProduct.main}>
         <div className={stylesProduct.navigation}>
           <Nav url={"/"} text={"↩ Back to Homepage"} />
