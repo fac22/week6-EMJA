@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import Nav from "../components/navigation.jsx";
+import Pricefilter from "../components/pricefilter.jsx";
 import stylesProduct from "../styles/Product.module.css";
 
 import { getAllProducts } from "../database/model";
@@ -42,7 +43,7 @@ export default function Products({ cupcakeData }) {
           </div>
           <Nav url={"/basket"} text={"Basket 🧺 "} />
         </div>
-
+        <Pricefilter cupcakeData={cupcakeData} />
         <h2>All products</h2>
         <ul className={styles.grid}>
           {cupcakeData.map((cupcake) => (
@@ -62,6 +63,7 @@ export default function Products({ cupcakeData }) {
                 />
               </div>
               <p>{cupcake.description}</p>
+              <p>{cupcake.price}</p>
               <Link href={`/products/${cupcake.id}`}>
                 <a className={styles.readMore}>Read more</a>
               </Link>

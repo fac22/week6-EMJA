@@ -68,6 +68,7 @@ export default function Cupcake({ cupcakeData }) {
           </div>
           <div className={stylesProduct.description}>
             <p>{cupcakeData.description}</p>
+            <p>{cupcakeData.price}</p>
           </div>
         </div>
 
