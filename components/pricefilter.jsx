@@ -2,6 +2,8 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
+import stylesProduct from "../styles/Product.module.css";
+
 
 export default function Pricefilter({ cupcakeData }) {
   const [min, setMin] = React.useState(1.75);
@@ -9,7 +11,7 @@ export default function Pricefilter({ cupcakeData }) {
   console.log(category);
   return (
     <div>
-      <fieldset>
+      <fieldset className={stylesProduct.centre}>
         <legend>Filter by price</legend>
         <label htmlFor="min-price">
           Price £{min} to £3.50

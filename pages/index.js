@@ -7,7 +7,7 @@ import stylesProduct from "../styles/Product.module.css";
 
 import { getAllProducts } from "../database/model";
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const cupcakeData = await getAllProducts();
 
   const shuffledCupcakes = cupcakeData.sort(() => 0.5 - Math.random());

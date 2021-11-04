@@ -22,3 +22,13 @@ export function getProduct(id) {
 export function getAllProductsIds() {
   return db.query(`SELECT id FROM products`).then((result) => result.rows);
 }
+
+export function addToBasket(data) {
+  const query = /*sql*/ `INSERT INTO basket (products) VALUES ($1)`;
+  return db.query(query, [data]);
+}
+
+export function getBasket(data) {
+  const query = /*sql*/ `SELECT products FROM basket`;
+  return db.query(query).then((result) => result.rows);
+}

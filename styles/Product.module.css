@@ -11,6 +11,15 @@
   flex-direction: column;
   justify-content: top;
   align-items: center;
+  position: top;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
 }
 
 .h1 {
@@ -47,6 +56,17 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+.centre {
+  text-align: center;
+}
+
+.pink {
+  min-height: 80%;
+  text-align: center;
+  color: #ff64be;
+  vertical-align: center;
 }
 
 @media (max-width: 600px) {

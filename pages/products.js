@@ -45,7 +45,7 @@ export default function Products({ cupcakeData }) {
           </div>
           <Nav url={"/basket"} text={"Basket 🧺 "} />
         </div>
-        <h2>All products</h2>
+        <h2>All Cupcakes</h2>
         <Pricefilter cupcakeData={cupcakeData} />
         <CategoryFilter cupcakeData={cupcakeData} />
       </main>
