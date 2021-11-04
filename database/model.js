@@ -32,3 +32,8 @@ export function getBasket(data) {
   const query = /*sql*/ `SELECT products FROM basket`;
   return db.query(query).then((result) => result.rows);
 }
+
+export function updateProduct(quantity, size) {
+  const query = /*sql*/ `UPDATE products SET quantity = $1, size = $2 `;
+  return db.query(query, [quantity, size]);
+}
