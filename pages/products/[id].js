@@ -22,7 +22,6 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  // console.log(params);
   const cupcakeData = await getProduct(params.id);
   return {
     props: {
@@ -32,17 +31,7 @@ export async function getStaticProps({ params }) {
 }
 
 export default function Cupcake({ cupcakeData }) {
-  const [size, setSize] = useState("large");
-
-  function chooseClass(sizeV) {
-    if (sizeV === "small") {
-      return stylesProduct.small;
-    } else if (sizeV === "medium") {
-      return stylesProduct.medium;
-    } else {
-      return stylesProduct.large;
-    }
-  }
+  const [size, setSize] = useState(" ");
 
   return (
     <>
@@ -55,7 +44,7 @@ export default function Cupcake({ cupcakeData }) {
         <h1 className={stylesProduct.h1}>{cupcakeData.name}</h1>
 
         <div className={`${stylesProduct.image}, ${stylesProduct.flex}`}>
-          <div className={`${chooseClass(size)} ${stylesProduct.image}`}>
+          <div className={`${stylesProduct.image}`}>
             <Image
               src={`/images/${cupcakeData.id}.png`}
               // src={`/../public/images/id_1.jpeg`}
@@ -74,7 +63,6 @@ export default function Cupcake({ cupcakeData }) {
           <SizePicker size={size} setSize={setSize} />
         </div>
         <div>
-          <Button text={"Buy"} />
           <Button text={"Add to basket"} />
         </div>
       </article>

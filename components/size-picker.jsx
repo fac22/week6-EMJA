@@ -1,12 +1,10 @@
-export default function SizePicker({ size, setSize }) {
-  console.log(`WE"RE HERE!!!!!!! ${size}`);
+import stylesPicker from "./size-picker.module.css";
 
+export default function SizePicker({ size, setSize }) {
   return (
     <div>
       <form
         onChange={(event) => {
-          event.preventDefault();
-          console.log(event);
           setSize(event.target.value);
         }}
       >
