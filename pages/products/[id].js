@@ -61,7 +61,7 @@ export default function Cupcake({ cupcakeData }) {
       </Head>
       <article className={stylesProduct.main}>
         <div className={stylesProduct.navigation}>
-          <Nav url={"/"} text={"↩ Back to Homepage"} />
+          <Nav url={"/"} text={"Home 🏠 "} />
           <Nav url={"/basket"} text={"Basket 🧺 "} />
         </div>
 
