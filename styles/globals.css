@@ -30,3 +30,7 @@ small {
   margin-bottom: 2rem;
   font-size: 1.2rem;
 }
+
+input[type="radio"]:checked + label {
+  background-color: lightgrey;
+}

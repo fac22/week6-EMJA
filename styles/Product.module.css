@@ -43,18 +43,6 @@
   justify-content: space-between;
 }
 
-.small {
-  border: 5px solid black;
-}
-
-.medium {
-  width: 200px;
-}
-
-.large {
-  width: 400px;
-}
-
 .flex {
   display: flex;
   flex-direction: row;
