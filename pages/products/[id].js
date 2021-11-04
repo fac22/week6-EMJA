@@ -31,6 +31,16 @@ export async function getStaticProps({ params }) {
   };
 }
 
+async function addToBasket(data) {
+  await fetch("/api/basket", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  });
+}
+
 export default function Cupcake({ cupcakeData }) {
   const [size, setSize] = useState(" ");
 
@@ -54,30 +64,32 @@ export default function Cupcake({ cupcakeData }) {
           <Nav url={"/basket"} text={"Basket 🧺 "} />
         </div>
 
-        <h1 className={stylesProduct.h1}>{cupcakeData.name}</h1>
+        <form onSubmit={() => addToBasket(cupcakeData)}>
+          <h1 className={stylesProduct.h1}>{cupcakeData.name}</h1>
 
-        <div className={`${stylesProduct.image}, ${stylesProduct.flex}`}>
-          <div className={`${stylesProduct.image}`}>
-            <Image
-              src={`/images/${cupcakeData.id}.png`}
-              // src={`/../public/images/id_1.jpeg`}
-              alt={cupcakeData.name}
-              width="300"
-              height="300"
-            />
+          <div className={`${stylesProduct.image}, ${stylesProduct.flex}`}>
+            <div className={`${stylesProduct.image}`}>
+              <Image
+                src={`/images/${cupcakeData.id}.png`}
+                // src={`/../public/images/id_1.jpeg`}
+                alt={cupcakeData.name}
+                width="300"
+                height="300"
+              />
+            </div>
+            <div className={stylesProduct.description}>
+              <p>{cupcakeData.description}</p>
+            </div>
           </div>
-          <div className={stylesProduct.description}>
-            <p>{cupcakeData.description}</p>
-          </div>
-        </div>
 
-        {/* <p >Price  </p> */}
-        <div>
-          <SizePicker size={size} setSize={setSize} />
-        </div>
-        <div>
-          <Button text={"Add to basket"} />
-        </div>
+          {/* <p >Price  </p> */}
+          <div>
+            <SizePicker size={size} setSize={setSize} />
+          </div>
+          <div>
+            <Button text={"Add to basket"} />
+          </div>
+        </form>
       </article>
     </>
   );
