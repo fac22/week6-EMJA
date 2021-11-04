@@ -101,6 +101,22 @@
   line-height: 1.5;
 }
 
+.centre {
+  text-align: center;
+}
+
+.readMore {
+  font-weight: bold;
+  transform: scale(1.1);
+  color: #ff64be;
+}
+
+.readMore:visited {
+  font-weight: bold;
+  transform: scale(1.1);
+  color: #ff64be;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;

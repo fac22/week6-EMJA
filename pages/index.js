@@ -39,7 +39,7 @@ export default function Home({ selectedCupcakes }) {
         <div className={stylesProduct.navigation}>
           <Nav url={"/products"} text={"Shop Now 🧁 "} />
 
-          <div>
+          <div className={styles.centre}>
             <h1 className={styles.title}>EMJA Bakery 🧁</h1>
             <small>World&rsquo;s best cupcakes</small>
           </div>
@@ -57,7 +57,7 @@ export default function Home({ selectedCupcakes }) {
             <li className={styles.card} key={cupcake.id}>
               <p>
                 {cupcake.name.length > 24
-                  ? cupcake.name.slice(0, 24) + " ..."
+                  ? cupcake.name.slice(0, 18) + " ..."
                   : cupcake.name}
               </p>
 
@@ -69,7 +69,7 @@ export default function Home({ selectedCupcakes }) {
               />
               <p>{cupcake.description}</p>
               <Link href={`/products/${cupcake.id}`}>
-                <a>Read more</a>
+                <a className={styles.readMore}>Read more</a>
               </Link>
             </li>
           ))}
