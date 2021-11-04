@@ -5,7 +5,8 @@ import styles from "../styles/Home.module.css";
 
 export default function Pricefilter({ cupcakeData }) {
   const [min, setMin] = React.useState(1.75);
-
+  const [category, setCategory] = React.useState("all");
+  console.log(category);
   return (
     <div>
       <fieldset>
@@ -23,9 +24,11 @@ export default function Pricefilter({ cupcakeData }) {
           />
         </label>
       </fieldset>
+
       <ul className={styles.grid}>
         {cupcakeData
           .filter((cupcake) => cupcake.price >= min)
+
           .map((cupcake) => (
             <li className={styles.card} key={cupcake.id}>
               <div className={styles.flexRow}>
@@ -53,8 +56,3 @@ export default function Pricefilter({ cupcakeData }) {
     </div>
   );
 }
-
-// .filter(
-//   (cupcake) =>
-//
-// )
