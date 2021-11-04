@@ -7,6 +7,8 @@ import Button from "../../components/button.jsx";
 import Nav from "../../components/navigation.jsx";
 import SizePicker from "../../components/size-picker.jsx";
 import Head from "next/head";
+import styles from "../../styles/Home.module.css";
+
 
 import { getAllProductIds, getProduct } from "../../database/model";
 
@@ -58,9 +60,14 @@ export default function Cupcake({ cupcakeData }) {
           rel="stylesheet"
         />
       </Head>
+
       <article className={stylesProduct.main}>
         <div className={stylesProduct.navigation}>
           <Nav url={"/"} text={"Home 🏠 "} />
+          <div className={styles.centre}>
+            <h1 className={styles.title}>EMJA Bakery 🧁</h1>
+            <small>World&rsquo;s best cupcakes</small>
+          </div>
           <Nav url={"/basket"} text={"Basket 🧺 "} />
         </div>
 
@@ -79,15 +86,15 @@ export default function Cupcake({ cupcakeData }) {
             </div>
             <div className={stylesProduct.description}>
               <p>{cupcakeData.description}</p>
+              <p>£{cupcakeData.price}</p>
             </div>
-          </div>
 
-          {/* <p >Price  </p> */}
-          <div>
-            <SizePicker size={size} setSize={setSize} />
-          </div>
-          <div>
-            <Button text={"Add to basket"} />
+            <div>
+              <SizePicker size={size} setSize={setSize} />
+            </div>
+            <div>
+              <Button text={"Add to basket"} />
+            </div>
           </div>
         </form>
       </article>

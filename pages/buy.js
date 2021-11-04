@@ -1,28 +1,14 @@
 import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
-import styles from "../styles/Home.module.css";
 import Nav from "../components/navigation.jsx";
-import Pricefilter from "../components/pricefilter.jsx";
+import styles from "../styles/Home.module.css";
 import stylesProduct from "../styles/Product.module.css";
 
-import { getAllProducts } from "../database/model";
 
-export async function getStaticProps() {
-  const cupcakeData = await getAllProducts();
-
-  return {
-    props: {
-      cupcakeData,
-    },
-  };
-}
-
-export default function Products({ cupcakeData }) {
+export default function ThankYou() {
   return (
-    <div className={styles.container}>
+<div className={styles.container}>
       <Head>
-        <title>All Cupcakes 🧁</title>
+        <title>Thank You 💕</title>
         <meta name="description" content="" />
         <link rel="icon" href="/favicon.ico" />
 
@@ -33,7 +19,8 @@ export default function Products({ cupcakeData }) {
           rel="stylesheet"
         />
       </Head>
-      <main className={styles.main}>
+
+      <main className={`${styles.main}, ${stylesProduct.sticky}`}>
         <div className={stylesProduct.navigation}>
           <Nav url={"/"} text={"Home 🏠 "} />
 
@@ -43,9 +30,15 @@ export default function Products({ cupcakeData }) {
           </div>
           <Nav url={"/basket"} text={"Basket 🧺 "} />
         </div>
-        <h2>All products</h2>
-        <Pricefilter cupcakeData={cupcakeData} />
+
+  <div className={`${stylesProduct.centre}, ${stylesProduct.pink}`}>
+        <h1>Thank you</h1>
+        <h2>We've received your order</h2>
+        <p>You're cupcakes are on its way 🚀</p>
+        </div>
       </main>
+
+      <footer className={styles.footer}></footer>
     </div>
-  );
+  )
 }

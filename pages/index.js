@@ -7,7 +7,7 @@ import stylesProduct from "../styles/Product.module.css";
 
 import { getAllProducts } from "../database/model";
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const cupcakeData = await getAllProducts();
 
   const shuffledCupcakes = cupcakeData.sort(() => 0.5 - Math.random());
@@ -70,6 +70,7 @@ export default function Home({ selectedCupcakes }) {
                 />
               </div>
               <p>{cupcake.description}</p>
+              <p>£{cupcake.price}</p>
               <Link href={`/products/${cupcake.id}`}>
                 <a className={styles.readMore}>Read more</a>
               </Link>
