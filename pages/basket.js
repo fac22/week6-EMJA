@@ -44,7 +44,7 @@ export default function Basket({ basketItems }) {
         <h2 className={stylesBasket.h2}>Your Basket</h2>
         <ul>
           {basketItems.map((item) => (
-            <li>
+            <li key={item.products.id}>
               <div className={stylesBasket.item}>
                 <p> 🧁 {item.products.id}</p>
                 <Image
