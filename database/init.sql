@@ -29,7 +29,7 @@ CREATE TABLE products (
     id SERIAL PRIMARY KEY,
     name TEXT NOT NULL,
     description TEXT NOT NULL,
-    price INTEGER,
+    price NUMERIC,
     category_id INTEGER REFERENCES categories(id) ON DELETE CASCADE
 );
 
@@ -38,9 +38,9 @@ INSERT INTO products (name, description, price) VALUES
 ('Blueberry', 'Quisque eros massa, congue sed tortor eu, blandit venenatis lorem.', 2.50),
 ('Carrot Cake', 'Quisque eros massa, congue sed tortor eu, blandit venenatis lorem.', 2.50),
 ('Cookies and Cream', 'Quisque eros massa, congue sed tortor eu, blandit venenatis lorem.', 2.50),
-('Lemon Drizzle', 'Quisque eros massa, congue sed tortor eu, blandit venenatis lorem.', 1),
+('Lemon Drizzle', 'Quisque eros massa, congue sed tortor eu, blandit venenatis lorem.', 1.75),
 ('Banoffee', 'Quisque eros massa, congue sed tortor eu, blandit venenatis lorem.', 3.00),
-('Vanilla with Rainbow Sprinkles', 'Quisque eros massa, congue sed tortor eu, blandit venenatis lorem.', 1),
+('Vanilla with Rainbow Sprinkles', 'Quisque eros massa, congue sed tortor eu, blandit venenatis lorem.', 1.75),
 ('Tiramisu', 'Quisque eros massa, congue sed tortor eu, blandit venenatis lorem.', 2.50),
 ('Deluxe Chocolate', 'Quisque eros massa, congue sed tortor eu, blandit venenatis lorem.',3.00),
 ('Passionfruit', 'Quisque eros massa, congue sed tortor eu, blandit venenatis lorem.', 3.00),

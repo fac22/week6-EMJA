@@ -4,19 +4,19 @@ import Link from "next/link";
 import styles from "../styles/Home.module.css";
 
 export default function Pricefilter({ cupcakeData }) {
-  const [min, setMin] = React.useState(0);
+  const [min, setMin] = React.useState(1.75);
 
   return (
     <div>
       <fieldset>
         <legend>Filter by price</legend>
         <label htmlFor="min-price">
-          Price £1.00 to £4.00
+          Price £{min} to £3.50
           <input
             type="range"
             id="min-price"
-            min="1"
-            max="4"
+            min="1.75"
+            max="3.50"
             step="0.25"
             value={min}
             onChange={(event) => setMin(event.target.value)}
@@ -43,7 +43,7 @@ export default function Pricefilter({ cupcakeData }) {
                 />
               </div>
               <p>{cupcake.description}</p>
-              <p>£{cupcake.price.toFixed(2)}</p>
+              <p>£{cupcake.price}</p>
               <Link href={`/products/${cupcake.id}`}>
                 <a className={styles.readMore}>Read more</a>
               </Link>
