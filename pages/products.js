@@ -34,7 +34,7 @@ export default function Products({ cupcakeData }) {
       </Head>
       <main className={styles.main}>
         <div className={stylesProduct.navigation}>
-          <Nav url={"/products"} text={"All Cupcakes 🧁 "} />
+          <Nav url={"/"} text={"Home 🏠 "} />
 
           <div className={styles.centre}>
             <h1 className={styles.title}>EMJA Bakery 🧁</h1>
@@ -49,8 +49,8 @@ export default function Products({ cupcakeData }) {
             <li className={styles.card} key={cupcake.id}>
               <div className={styles.flexRow}>
                 <p className={styles.bold}>
-                  {cupcake.name.length > 24
-                    ? cupcake.name.slice(0, 24) + " ..."
+                  {cupcake.name.length > 18
+                    ? cupcake.name.slice(0, 18) + " ..."
                     : cupcake.name}
                 </p>
 
