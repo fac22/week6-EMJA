@@ -4,7 +4,7 @@ import Link from "next/link";
 import styles from "../styles/Home.module.css";
 
 export default function CategoryFilter({ cupcakeData }) {
-  const [category, setCategory] = React.useState("All");
+  const [category, setCategory] = React.useState(" ");
   console.log(category);
   return (
     <div>
@@ -16,7 +16,7 @@ export default function CategoryFilter({ cupcakeData }) {
             type="radio"
             name="categories"
             id="all"
-            value="all"
+            value=" "
             onChange={(event) => setCategory(event.target.value)}
           />
         </label>
@@ -47,6 +47,16 @@ export default function CategoryFilter({ cupcakeData }) {
             name="categories"
             id="vegan"
             value="Vegan"
+            onChange={(event) => setCategory(event.target.value)}
+          />
+        </label>
+        <label htmlFor="cookie">
+          Cookie
+          <input
+            type="radio"
+            name="categories"
+            id="cookie"
+            value="Cookie"
             onChange={(event) => setCategory(event.target.value)}
           />
         </label>
