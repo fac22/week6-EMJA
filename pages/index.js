@@ -55,18 +55,20 @@ export default function Home({ selectedCupcakes }) {
         <ul className={styles.grid}>
           {selectedCupcakes.map((cupcake) => (
             <li className={styles.card} key={cupcake.id}>
-              <p>
-                {cupcake.name.length > 24
-                  ? cupcake.name.slice(0, 18) + " ..."
-                  : cupcake.name}
-              </p>
+              <div className={styles.flexRow}>
+                <p className={styles.bold}>
+                  {cupcake.name.length > 18
+                    ? cupcake.name.slice(0, 18) + " ..."
+                    : cupcake.name}
+                </p>
 
-              <Image
-                src={`/images/${cupcake.id}.png`}
-                alt={cupcake.name}
-                width="50"
-                height="50"
-              />
+                <Image
+                  src={`/images/${cupcake.id}.png`}
+                  alt={cupcake.name}
+                  width="70"
+                  height="70"
+                />
+              </div>
               <p>{cupcake.description}</p>
               <Link href={`/products/${cupcake.id}`}>
                 <a className={styles.readMore}>Read more</a>
