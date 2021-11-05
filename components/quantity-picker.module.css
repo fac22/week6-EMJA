@@ -3,12 +3,22 @@
   flex-direction: row;
   align-content: space-between;
   justify-content: center;
-  width: 20rem;
+
+  margin-top: 2rem;
+  padding: 1rem;
+  width: 30rem;
+
+  font-size: 1.2rem;
 }
 
 .buttons {
+  background-color: white;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding: 0.5rem;
+
   border: 1px solid #ff9671;
-  border-radius: 12px;
+  border-radius: 7px;
   box-shadow: 0px 2px 5px rgba(252, 143, 119, 0.6);
 
   transition: color 0.15s ease, border-color 0.15s ease;
