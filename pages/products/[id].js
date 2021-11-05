@@ -90,10 +90,10 @@ export default function Cupcake({ cupcakeData }) {
               <p>£{cupcakeData.price}</p>
             </div>
 
-            <div>
+            <div className={stylesProduct.flex}>
               <QuantityPicker quantity={quantity} setQuantity={setQuantity} />
             </div>
-            <div>
+            <div className={stylesProduct.flex}>
               <SizePicker size={size} setSize={setSize} />
             </div>
             <div>
