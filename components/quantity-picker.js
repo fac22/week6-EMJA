@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styles from "./quantity-picker.module.css";
 
 export default function QuantityPicker({ quantity, setQuantity }) {
   // const handleIncrement = () => {
@@ -9,29 +10,33 @@ export default function QuantityPicker({ quantity, setQuantity }) {
   };
 
   const handleDecrement = () => {
-    setQuantity((prevQuantity) => prevQuantity - 1);
+    if (quantity === 0) {
+      setQuantity(0);
+    } else {
+      setQuantity((prevQuantity) => prevQuantity - 1);
+    }
   };
 
   return (
-    <div>
+    <div className={styles.container}>
       <div>
-        <button
+        <button className={styles.buttons}
           onClick={(e) => {
             e.preventDefault();
             handleIncrement();
           }}
         >
-          Add
+          Add ⬆️
         </button>
       </div>
       {quantity}
-      <button
+      <button className={styles.buttons}
         onClick={(e) => {
           e.preventDefault();
           handleDecrement();
         }}
       >
-        Remove
+        Remove ⬇️
       </button>
     </div>
   );

@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  justify-content: center;
+
+  margin-top: 2rem;
+  padding: 1rem;
+  width: 30rem;
+
+  font-size: 1.2rem;
+}
+
+.buttons {
+  background-color: white;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding: 0.5rem;
+
+  font-family: "Zen Kurenaido", sans-serif;
+  font-size: 1rem;
+
+  border: 1px solid #d65db1;
+  border-radius: 7px;
+  box-shadow: 0px 2px 5px rgba(252, 143, 119, 0.6);
+
+  transition: all 0.3s;
+}
+
+.buttons:hover {
+  transform: translateY(-3%);
+}
