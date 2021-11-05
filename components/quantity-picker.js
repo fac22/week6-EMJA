@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styles from "./quantity-picker.module.css";
 
 export default function QuantityPicker({ quantity, setQuantity }) {
   // const handleIncrement = () => {
@@ -17,7 +18,7 @@ export default function QuantityPicker({ quantity, setQuantity }) {
   };
 
   return (
-    <div>
+    <div className={styles.container}>
       <div>
         <button
           onClick={(e) => {
