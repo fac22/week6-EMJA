@@ -48,10 +48,11 @@ export default function Basket({ basketItems }) {
               <div className={stylesBasket.item}>
                 <p> 🧁 {item.products.id}</p>
                 <Image
+                  className={stylesBasket.thumb}
                   src={`/images/${item.products.id}.png`}
                   alt={item.products.name}
-                  width="60"
-                  height="60"
+                  width="100%"
+                  height="100%"
                 />
                 <p>{item.products.name}</p>
                 <p>{item.products.price}</p>
