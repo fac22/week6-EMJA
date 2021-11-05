@@ -20,23 +20,23 @@ export default function QuantityPicker({ quantity, setQuantity }) {
   return (
     <div className={styles.container}>
       <div>
-        <button
+        <button className={styles.buttons}
           onClick={(e) => {
             e.preventDefault();
             handleIncrement();
           }}
         >
-          Add
+          Add ⬆️
         </button>
       </div>
       {quantity}
-      <button
+      <button className={styles.buttons}
         onClick={(e) => {
           e.preventDefault();
           handleDecrement();
         }}
       >
-        Remove
+        Remove ⬇️
       </button>
     </div>
   );

@@ -1,4 +1,15 @@
 .container {
   display: flex;
   flex-direction: row;
+  align-content: space-between;
+  justify-content: center;
+  width: 20rem;
+}
+
+.buttons {
+  border: 1px solid #ff9671;
+  border-radius: 12px;
+  box-shadow: 0px 2px 5px rgba(252, 143, 119, 0.6);
+
+  transition: color 0.15s ease, border-color 0.15s ease;
 }
