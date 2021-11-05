@@ -9,7 +9,11 @@ export default function QuantityPicker({ quantity, setQuantity }) {
   };
 
   const handleDecrement = () => {
-    setQuantity((prevQuantity) => prevQuantity - 1);
+    if (quantity === 0) {
+      setQuantity(0);
+    } else {
+      setQuantity((prevQuantity) => prevQuantity - 1);
+    }
   };
 
   return (
