@@ -51,8 +51,8 @@ export default function Basket({ basketItems }) {
                   className={stylesBasket.thumb}
                   src={`/images/${item.products.id}.png`}
                   alt={item.products.name}
-                  width="100%"
-                  height="100%"
+                  width="90%"
+                  height="90%"
                 />
                 <p>{item.products.name}</p>
                 <p>{item.products.price}</p>
