@@ -89,16 +89,15 @@ export default function Cupcake({ cupcakeData }) {
               <p>{cupcakeData.description}</p>
               <p>£{cupcakeData.price}</p>
             </div>
-
-            <div className={stylesProduct.flex}>
-              <QuantityPicker quantity={quantity} setQuantity={setQuantity} />
-            </div>
-            <div className={stylesProduct.flex}>
-              <SizePicker size={size} setSize={setSize} />
-            </div>
-            <div>
-              <Button text={"Add to basket"} />
-            </div>
+          </div>
+          <div className={stylesProduct.flex}>
+            <QuantityPicker quantity={quantity} setQuantity={setQuantity} />
+          </div>
+          <div className={stylesProduct.flex}>
+            <SizePicker size={size} setSize={setSize} />
+          </div>
+          <div>
+            <Button text={"Add to basket"} />
           </div>
         </form>
       </article>
