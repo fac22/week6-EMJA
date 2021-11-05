@@ -28,6 +28,8 @@
   margin-top: 1rem;
   color: #bb69e1;
   border-radius: 25px;
+
+  margin-left: 5rem;
 }
 
 .image {
@@ -51,6 +53,10 @@
   width: 90%;
   display: flex;
   justify-content: space-between;
+}
+
+.buyButton {
+  margin-left: 2rem;
 }
 
 .flex {

@@ -96,7 +96,7 @@ export default function Cupcake({ cupcakeData }) {
           <div className={stylesProduct.flex}>
             <SizePicker size={size} setSize={setSize} />
           </div>
-          <div>
+          <div className={stylesProduct.buyButton}>
             <Button text={"Add to basket"} />
           </div>
         </form>
