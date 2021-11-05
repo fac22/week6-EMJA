@@ -1,16 +1,15 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
-// import Layout from "../../components/layout";
-import stylesProduct from "../../styles/Product.module.css";
-import Image from "next/image";
-import Button from "../../components/button.jsx";
-import Nav from "../../components/navigation.jsx";
-import SizePicker from "../../components/size-picker.jsx";
-import Head from "next/head";
-import styles from "../../styles/Home.module.css";
-import QuantityPicker from "../../components/quantity-picker.js";
+import stylesProduct from '../../styles/Product.module.css';
+import Image from 'next/image';
+import Button from '../../components/button.jsx';
+import Nav from '../../components/navigation.jsx';
+import SizePicker from '../../components/size-picker.jsx';
+import Head from 'next/head';
+import styles from '../../styles/Home.module.css';
+import QuantityPicker from '../../components/quantity-picker.js';
 
-import { getAllProductIds, getProduct } from "../../database/model";
+import { getAllProductIds, getProduct } from '../../database/model';
 
 export async function getStaticPaths() {
   const allProductIds = await getAllProductIds();
@@ -34,17 +33,17 @@ export async function getStaticProps({ params }) {
 }
 
 async function addToBasket(data) {
-  await fetch("/api/basket", {
-    method: "POST",
+  await fetch('/api/basket', {
+    method: 'POST',
     headers: {
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
     },
     body: JSON.stringify(data),
   });
 }
 
 export default function Cupcake({ cupcakeData }) {
-  const [size, setSize] = useState(" ");
+  const [size, setSize] = useState(' ');
   const [quantity, setQuantity] = useState(0);
 
   return (
@@ -64,22 +63,21 @@ export default function Cupcake({ cupcakeData }) {
 
       <article className={stylesProduct.main}>
         <div className={stylesProduct.navigation}>
-          <Nav url={"/"} text={"Home 🏠 "} />
+          <Nav url={'/'} text={'Home 🏠 '} />
           <div className={styles.centre}>
             <h1 className={styles.title}>EMJA Bakery 🧁</h1>
             <small>World&rsquo;s best cupcakes</small>
           </div>
-          <Nav url={"/basket"} text={"Basket 🧺 "} />
+          <Nav url={'/basket'} text={'Basket 🧺 '} />
         </div>
 
         <form onSubmit={() => addToBasket(cupcakeData)}>
           <h1 className={stylesProduct.h1}>{cupcakeData.name}</h1>
 
           <div className={`${stylesProduct.image}, ${stylesProduct.flex}`}>
-            <div className={`${stylesProduct.image}`}>
+            <div className={stylesProduct.image}>
               <Image
                 src={`/images/${cupcakeData.id}.png`}
-                // src={`/../public/images/id_1.jpeg`}
                 alt={cupcakeData.name}
                 width="300"
                 height="300"
@@ -97,7 +95,7 @@ export default function Cupcake({ cupcakeData }) {
               <SizePicker size={size} setSize={setSize} />
             </div>
             <div>
-              <Button text={"Add to basket"} />
+              <Button text={'Add to basket'} />
             </div>
           </div>
         </form>
