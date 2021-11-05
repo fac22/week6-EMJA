@@ -50,6 +50,7 @@ export default function Home({ selectedCupcakes }) {
           src={`/images/header.jpeg`}
           width="650"
           height="390"
+          alt="a row of cupcakes with blue icing and sprinkles"
         />
         <h2>Featured products</h2>
         <ul className={styles.grid}>
